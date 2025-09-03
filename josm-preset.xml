@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<presets xmlns="http://josm.openstreetmap.de/tagging-preset-1.0" author="Simon" version="0.7" shortdescription="STAN" description="" icon="https://i.ibb.co/9mSGH9mh/Img-2025-09-01-18-18-28.png">
+  <group name="STAN">
+    <!-- Plateforme de transport -->
+    <item name="Platform" type="closedway" icon="presets/transport/platform.svg">
+      <label text="STAN" />
+      <key key="public_transport" value="platform"/>
+      <text key="name" text="Nom de l'arrêt" default="" />
+      <label text="GTFS" />
+      <text key="gtfs:stop_id:FR-GES-STAN" text="ID de l'arrêt" default="" />
+      <text key="gtfs:stop_code:FR-GES-STAN" text="Code de l'arrêt" default="" />
+      <text key="gtfs:stop_name:FR-GES-STAN" text="Nom de l'arrêt" default="" />
+      <label text="Type de transport" />
+      <check key="bus" text="Bus?" default="on" />
+      <check key="trolleybus" text="Trolleybus?" default="off" />
+    </item>
+    <!-- Parking sur voirie -->
+    <group name="Parking sur voirie">
+      <!-- Parking global sur voirie -->
+      <item name="Parking sur voirie" type="node,closedway" icon="icons/parking.svg">
+        <label text="Parking sur voirie" />
+        <key key="amenity" value="parking" />
+        <key key="parking" value="street_side" />
+        <text key="capacity" text="Capacité totale" />
+        <text key="capacity:disabled" text="Nombre places PMR" />
+        <combo key="orientation" text="Orientation (longitudinale, perpendiculaire...)" values="parallel,diagonal,perpendicular" />
+        <key key="source" value="GrandGrandNancy Orthophotographie 2025" />
+      </item>
+      <!-- Place PMR -->
+      <item name="Place PMR" type="node,closedway" icon="icons/pmr.svg">
+        <label text="Place réservée PMR" />
+        <key key="amenity" value="parking_space" />
+        <key key="parking_space" value="disabled" />
+        <key key="source" value="GrandGrandNancy Orthophotographie 2025" />
+      </item>
+      <!-- Place livraison -->
+      <item name="Place livraison" type="node,closedway" icon="icons/delivery.svg">
+        <label text="Place livraison" />
+        <key key="amenity" value="parking_space" />
+        <key key="parking_space" value="delivery" />
+        <key key="source" value="GrandGrandNancy Orthophotographie 2025" />
+      </item>
+      <!-- Place normale (sans parking_space=yes qui est inutile selon OSM) -->
+      <item name="Place normale" type="node,closedway" icon="icons/space.svg">
+        <label text="Place normale" />
+        <key key="amenity" value="parking_space" />
+        <key key="source" value="GrandGrandNancy Orthophotographie 2025" />
+      </item>
+    </group>
+  </group>
+</presets>
