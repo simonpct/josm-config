@@ -21,9 +21,9 @@
         <label text="Parking sur voirie" />
         <key key="amenity" value="parking" />
         <key key="parking" value="street_side" />
-        <text key="capacity" text="Capacité totale" />
-        <text key="capacity:disabled" text="Nombre places PMR" />
-        <combo key="orientation" text="Orientation (longitudinale, perpendiculaire...)" values="parallel,diagonal,perpendicular" />
+        <text key="capacity" text="Capacité totale" default="1" />
+        <text key="capacity:disabled" text="Nombre places PMR" default="0" />
+        <combo key="orientation" text="Orientation (longitudinale, perpendiculaire...)" values="parallel,diagonal,perpendicular" default="parallel" />
         <key key="source" value="GrandGrandNancy Orthophotographie 2025" />
       </item>
       <!-- Place PMR -->
