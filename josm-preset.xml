@@ -17,7 +17,7 @@
     <!-- Parking sur voirie -->
     <group name="Parking sur voirie">
       <!-- Parking global sur voirie -->
-      <item name="Parking sur voirie" type="node,closedway" icon="icons/parking.svg">
+      <item name="Parking sur voirie" type="node,closedway" icon="assets/parking.svg">
         <label text="Parking sur voirie" />
         <key key="amenity" value="parking" />
         <key key="parking" value="street_side" />
@@ -27,21 +27,21 @@
         <key key="source" value="GrandGrandNancy Orthophotographie 2025" />
       </item>
       <!-- Place PMR -->
-      <item name="Place PMR" type="node,closedway" icon="icons/pmr.svg">
+      <item name="Place PMR" type="node,closedway" icon="assets/pmr.svg">
         <label text="Place réservée PMR" />
         <key key="amenity" value="parking_space" />
         <key key="parking_space" value="disabled" />
         <key key="source" value="GrandGrandNancy Orthophotographie 2025" />
       </item>
       <!-- Place livraison -->
-      <item name="Place livraison" type="node,closedway" icon="icons/delivery.svg">
+      <item name="Place livraison" type="node,closedway" icon="assets/delivery.svg">
         <label text="Place livraison" />
         <key key="amenity" value="parking_space" />
         <key key="parking_space" value="delivery" />
         <key key="source" value="GrandGrandNancy Orthophotographie 2025" />
       </item>
       <!-- Place normale (sans parking_space=yes qui est inutile selon OSM) -->
-      <item name="Place normale" type="node,closedway" icon="icons/space.svg">
+      <item name="Place normale" type="node,closedway" icon="assets/space.svg">
         <label text="Place normale" />
         <key key="amenity" value="parking_space" />
         <key key="source" value="GrandGrandNancy Orthophotographie 2025" />
