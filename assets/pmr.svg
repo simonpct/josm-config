@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="28.068 90.4385 245.023 243.4315" width="245.023px" height="243.4315px">
+  <rect x="28.068" y="91.36" width="245.023" height="242.51" style="stroke: rgb(0, 0, 0); fill-rule: nonzero; paint-order: fill; stroke-width: 6px; fill: rgb(255, 255, 255);"/>
+  <text style="fill: rgb(63, 170, 231); font-family: &quot;Arial&quot;, sans-serif; font-size: 28px; font-weight: 700; white-space: pre;" transform="matrix(5.543458938598633, 0, 0, 5.401879787445068, -683.500732421875, -1737.2269287109375)" x="130.999" y="363.699">P</text>
+  <rect x="163.25" y="159.316" width="80.323" height="146.038" style="paint-order: stroke; stroke-width: 20px; fill: rgb(255, 255, 255); stroke: rgb(63, 172, 231);"/>
+  <path style="paint-order: fill; fill: rgba(216, 216, 216, 0); stroke-width: 10px; stroke: rgb(81, 166, 208);" d="M 199.017 208.774 C 177.452 211.698 204.443 234.228 214.242 226.259 C 221.755 220.152 214.537 196.41 207.356 202.252 C 204.415 204.646 197.275 246.696 199.912 248.842 C 206.058 253.839 221.742 251.755 230.364 251.755"/>
+  <path style="paint-order: fill; fill: rgba(216, 216, 216, 0); stroke-width: 10px; stroke: rgb(81, 166, 208); transform-origin: 200.637px 253.277px 0px;" d="M 194.813 233.067 C 148.122 250.67 221.941 293.176 221.941 262.898"/>
+</svg>
