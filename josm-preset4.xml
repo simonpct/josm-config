@@ -26,11 +26,11 @@
       <key key="operator" value="Keolis Grand Nancy" />
       
       <key key="payment:coins" value="yes" />
-      <key key="payment:contactless" value="yes" /> />
+      <key key="payment:contactless" value="yes" />
       <key key="payment:credit_cards" value="yes" />
       <key key="payment:debit_cards" value="yes" />
       <key key="payment:notes" value="yes" />
-      </item>
+    </item>
     <!-- Parking sur voirie -->
     <group name="Parking sur voirie">
       <!-- Parking global sur voirie -->
