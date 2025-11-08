@@ -15,7 +15,6 @@
       <check key="trolleybus" text="Trolleybus?" default="off" />
     </item>
     <item name="DAT" type="node" icon="https://raw.githubusercontent.com/simonpct/josm-config/main/assets/dat.jpg">
-      <label text="DAT STAN" />
       <key key="amenity" value="vending_machine" />
       <key key="vending" value="public_transport_tickets" />
       
