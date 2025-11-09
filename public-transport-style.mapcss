@@ -1,0 +1,226 @@
+meta 
+{
+    title: "Public Transport v2";
+    description: "Highlight important information regarding public transport according to public transport version 2.";
+    version: "1.5.9_2023-12-28";
+    author: "Ialokim";
+    link: "https://josm.openstreetmap.de/wiki/Styles/PublicTransportV2";
+}
+
+meta[lang=de]
+{
+    title: "Öffentlicher Verkehr v2";
+    description: "Hebt wichtige Informationen des öffentlichen Verkehrs nach Public Transport Version 2 hervor.";
+}
+
+meta[lang=es]
+{
+    title: "Transporte Público v2";
+    description: "Resalta informaciones importantes del transporte público acorde a Public Tranport Version 2.";
+}
+
+
+/*** Initial text properties ***/
+way|z16-[public_transport=platform],
+node|z16-[public_transport=platform],
+node|z16-[public_transport=stop_position] {
+        text-color: white;
+        text-opacity: 1.0;
+        font-size: 12;
+        text-halo-radius: 3;
+        text-halo-color: #000000;
+        text-halo-opacity: 0.8;
+        font-weight: bold;
+}
+
+
+/*** public_transport=platform ***/
+/* unclosed way design > tagging error! */
+way|z16-[public_transport=platform]!:closed{
+        width: 10;
+        dashes: none;
+        color: #ffffff;
+        opacity: 1.0;
+        text-position: line
+}
+
+/* area design */
+area|z16-[public_transport=platform]{
+        width: 3;
+        color: #ffffff;
+        fill-color: #ffffff;
+        fill-opacity: 0.3;
+        text-position: center;
+        font-weight: bold;
+}
+
+/* node design */
+node|z16-[public_transport=platform] {
+        icon-image: "warning-small.svg";
+        text-anchor-horizontal: right;
+        text-anchor-vertical: center;
+        text-offset-x: 5;
+        text: "";
+        object-z-index: 1.0;
+}
+
+/* node halo design */
+node|z16-[public_transport=platform]::halo {
+        icon-image: none;
+        symbol-shape: square;
+        symbol-fill-color: white;
+        symbol-size: 18;
+}
+node|z19-[public_transport=platform]::halo {
+        object-z-index:-1.0;
+}
+
+
+
+/*** public_transport=stop_position ***/
+/* node design */
+node|z16-[public_transport=stop_position] {
+        icon-image: none;
+        text-anchor-horizontal: center;
+        text-anchor-vertical: center;
+        text: "";
+        object-z-index: 1.0;
+}
+node|z19-[public_transport=stop_position] {
+        icon-image: "warning-small.svg";
+        text-anchor-horizontal: right;
+        text-offset-x: 5;
+}
+
+/* node halo design */
+node|z16-[public_transport=stop_position]::halo {
+        icon-image: none;
+        symbol-shape: square;
+        symbol-fill-color: white;
+        symbol-size: 18;
+}
+node|z19-[public_transport=stop_position]::halo {
+        object-z-index:-1.0;
+}
+
+
+
+
+/*** public_transport=stop_area ***/
+/* unclosed way design > tagging error! */
+relation|z16-[public_transport=stop_area] > way!:closed {
+        dashes: 10,10;
+        dashes-background-color: parent_tag(colour);
+}
+relation|z16-[public_transport=stop_area] > way!:closed:selected {
+        dashes-background-color: parent_tag(colour);
+}
+
+/* area design */
+relation|z16-[public_transport=stop_area] > area {
+        color: parent_tag(colour);
+}
+relation|z16-[public_transport=stop_area] > area:selected {
+        color: parent_tag(colour);
+}
+
+/* node design */
+relation[public_transport=stop_area] >[index!=1] node|z16-18 {
+        text: "";
+}
+relation[public_transport=stop_area] >[index=1] node|z16-18 {
+        text: parent_tag(name);
+}
+relation[public_transport=stop_area] >[index=1] area|z15-18 {
+        text: parent_tag(name);
+        text-position: center;
+        text-color: white;
+        text-opacity: 1.0;
+        font-size: 12;
+        text-halo-radius: 3;
+        text-halo-color: #000000;
+        text-halo-opacity: 0.8;
+        font-weight: bold;
+}
+relation[public_transport=stop_area] > node|z19-20[public_transport=stop_position] {
+        text: "";
+}
+relation[public_transport=stop_area] > node|z19-[public_transport=platform],
+relation[public_transport=stop_area] > node|z21-[public_transport=stop_position] {
+        text: cond(tag(name)==parent_tag(name),tag(name),concat(tag(name), " / ", parent_tag(name)));
+}
+relation[public_transport=stop_area] >[index=1] node|z16-18,
+relation[public_transport=stop_area] > node|z19-[public_transport=platform],
+relation[public_transport=stop_area] > node|z21-[public_transport=stop_position],
+relation[public_transport=stop_area] > area|z16- {
+        text-halo-color: hsb_color(CRC32_checksum(parent_tag("name"))/4294967296.0, 0.9, 0.7);
+}
+relation[public_transport=stop_area] >[index=1] node|z16-18,
+relation[public_transport=stop_area] > node|z19-[public_transport=platform]:selected,
+relation[public_transport=stop_area] > node|z21-[public_transport=stop_position]:selected,
+relation[public_transport=stop_area] > area|z16-:selected {
+        text-halo-color: parent_tag(colour);
+}
+
+/* node halo design */
+relation[public_transport=stop_area] > node|z16-::halo {
+        symbol-fill-color: parent_tag(colour);
+}
+relation[public_transport=stop_area] > node|z16-:selected::halo {
+        symbol-fill-color: parent_tag(colour);
+}
+
+/* node design for transport vehicles (only if has relation) */
+relation[public_transport=stop_area] > node|z16-18[public_transport=stop_position],
+relation[public_transport=stop_area] > node|z16-18[public_transport=platform] {
+        icon-image: none;
+}
+relation[public_transport=stop_area] > node|z19-[public_transport=stop_position][bus=yes] {
+        icon-image: "presets/transport/bus.svg";
+}
+relation[public_transport=stop_area] > node|z19-[public_transport=stop_position][tram=yes] {
+        icon-image: "presets/transport/tram.svg";
+}
+relation[public_transport=stop_area] > node|z19-[public_transport=stop_position][trolleybus=yes] {
+        icon-image: "presets/transport/trolleybus.svg";
+}
+relation[public_transport=stop_area] > node|z19-[public_transport=stop_position][light_rail=yes] {
+        icon-image: "presets/transport/railway/light_rail.svg";
+}
+relation[public_transport=stop_area] > node|z19-[public_transport=stop_position][subway=yes] {
+        icon-image: "presets/transport/railway/subway.svg";
+}
+relation[public_transport=stop_area] > node|z19-[public_transport=stop_position][train=yes] {
+        icon-image: "presets/transport/train.svg";
+}
+relation[public_transport=stop_area] > node|z19-[public_transport=platform] {
+        icon-image: "presets/transport/platform.svg";
+}
+
+
+/*** Route relations ***/
+relation[type=route][route=bus] > way|z13-::halo,
+relation[type=route][route=trolleybus] > way|z13-::halo,
+relation[type=route][route=tram] > way|z13-::halo,
+relation[type=route][route=light_rail] > way|z13-::halo,
+relation[type=route][route=subway] > way|z13-::halo,
+relation[type=route][route=train] > way|z13-::halo {
+        object-z-index: -1.0;
+        color: parent_tag(colour);
+        width: 16;
+        opacity: 0.5;
+        linecap: round;
+        linejoin: round;
+        text-color: parent_tag(colour);
+        font-size: 18;
+        text: parent_tag(ref);
+        text-position: line;
+        text-offset-y: 20;
+}
+relation[type=route] > way:selected,
+relation[type=route][route=tram] > way:selected,
+relation[type=route][route=light_rail] > way:selected,
+relation[type=route][route=subway] > way:selected,
+relation[type=route][route=train] > way:selected {
+        color: red;
+}
