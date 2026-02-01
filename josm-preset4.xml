@@ -29,7 +29,15 @@
       <key key="payment:contactless" value="yes" />
       <key key="payment:credit_cards" value="yes" />
       <key key="payment:debit_cards" value="yes" />
-      <key key="payment:notes" value="yes" />
+      <key key="payment:notes" value="no" />
+    </item>
+    <item name="network+operator" type="node,way,closedway,multipolygon,relation">
+      <key key="network:wikidata" value="Q3480395" />
+      <key key="network:wikipedia" value="fr:Service de transport de l'agglomération nancéienne" />
+      <key key="network" value="Stan" />
+      
+      <key key="operator:wikidata" value="Q136736478" />
+      <key key="operator" value="Keolis Grand Nancy" />
     </item>
     <!-- Parking sur voirie -->
     <group name="Parking sur voirie">
