@@ -71,7 +71,7 @@
   </group>
   <!-- Trottoirs -->
   <group name="Trottoirs">
-    <item name="Both" type="way, closedway" icon="https://raw.githubusercontent.com/simonpct/josm-config/refs/heads/main/assets/sidewalks/both.png">
+    <item name="Both" type="way,closedway" icon="https://raw.githubusercontent.com/simonpct/josm-config/refs/heads/main/assets/sidewalks/both.png">
       <key key="sidewalk:both" value="separate" />
       <key key="sidewalk" />
       <key key="sidewalk:surface" />
@@ -81,7 +81,7 @@
       <key key="sidewalk:left" />
       <key key="sidewalk:right" />
     </item>
-    <item name="Right" type="way, closedway" icon="https://raw.githubusercontent.com/simonpct/josm-config/refs/heads/main/assets/sidewalks/right.png">
+    <item name="Right" type="way,closedway" icon="https://raw.githubusercontent.com/simonpct/josm-config/refs/heads/main/assets/sidewalks/right.png">
       <key key="sidewalk:both" />
       <key key="sidewalk" />
       <key key="sidewalk:surface" />
@@ -91,7 +91,7 @@
       <key key="sidewalk:left" value="no" />
       <key key="sidewalk:right" value="separate" />
     </item>
-    <item name="Left" type="way, closedway" icon="https://raw.githubusercontent.com/simonpct/josm-config/refs/heads/main/assets/sidewalks/left.png">
+    <item name="Left" type="way,closedway" icon="https://raw.githubusercontent.com/simonpct/josm-config/refs/heads/main/assets/sidewalks/left.png">
       <key key="sidewalk:both" />
       <key key="sidewalk" />
       <key key="sidewalk:surface" />
@@ -100,6 +100,16 @@
       <key key="sidewalk:right:surface" />
       <key key="sidewalk:right" value="no" />
       <key key="sidewalk:left" value="separate" />
+    </item>
+    <item name="No" type="way,closedway" icon="https://raw.githubusercontent.com/simonpct/josm-config/refs/heads/main/assets/sidewalks/both.png">
+      <key key="sidewalk:both" value="no" />
+      <key key="sidewalk" />
+      <key key="sidewalk:surface" />
+      <key key="sidewalk:both:surface" />
+      <key key="sidewalk:left:surface" />
+      <key key="sidewalk:right:surface" />
+      <key key="sidewalk:right" />
+      <key key="sidewalk:left" />
     </item>
   </group>
 </presets>
