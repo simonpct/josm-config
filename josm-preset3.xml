@@ -39,38 +39,67 @@
       <key key="operator:wikidata" value="Q136736478" />
       <key key="operator" value="Keolis Grand Nancy" />
     </item>
-    <!-- Parking sur voirie -->
-    <group name="Parking sur voirie">
-      <!-- Parking global sur voirie -->
-      <item name="Parking sur voirie" type="node,closedway" icon="https://raw.githubusercontent.com/simonpct/josm-config/refs/heads/main/assets/parking.svg">
-        <label text="Parking sur voirie" />
-        <key key="amenity" value="parking" />
-        <key key="parking" value="street_side" />
-        <text key="capacity" text="Capacité totale" default="1" />
-        <text key="capacity:disabled" text="Nombre places PMR" default="0" />
-        <combo key="orientation" text="Orientation (longitudinale, perpendiculaire...)" values="parallel,diagonal,perpendicular" default="parallel" />
-        <key key="source" value="GrandGrandNancy Orthophotographie 2025" />
-      </item>
-      <!-- Place PMR -->
-      <item name="Place PMR" type="node,closedway" icon="https://raw.githubusercontent.com/simonpct/josm-config/refs/heads/main/assets/pmr.svg">
-        <label text="Place réservée PMR" />
-        <key key="amenity" value="parking_space" />
-        <key key="parking_space" value="disabled" />
-        <key key="source" value="GrandGrandNancy Orthophotographie 2025" />
-      </item>
-      <!-- Place livraison -->
-      <item name="Place livraison" type="node,closedway" icon="https://raw.githubusercontent.com/simonpct/josm-config/refs/heads/main/assets/delivery.svg">
-        <label text="Place livraison" />
-        <key key="amenity" value="parking_space" />
-        <key key="parking_space" value="delivery" />
-        <key key="source" value="GrandGrandNancy Orthophotographie 2025" />
-      </item>
-      <!-- Place normale (sans parking_space=yes qui est inutile selon OSM) -->
-      <item name="Place normale" type="node,closedway" icon="https://raw.githubusercontent.com/simonpct/josm-config/refs/heads/main/assets/space.svg">
-        <label text="Place normale" />
-        <key key="amenity" value="parking_space" />
-        <key key="source" value="GrandGrandNancy Orthophotographie 2025" />
-      </item>
-    </group>
+  </group>
+  <!-- Parking sur voirie -->
+  <group name="Parking sur voirie">
+    <!-- Parking global sur voirie -->
+    <item name="Parking sur voirie" type="node,closedway" icon="https://raw.githubusercontent.com/simonpct/josm-config/refs/heads/main/assets/parking.svg">
+      <key key="amenity" value="parking" />
+      <key key="parking" value="street_side" />
+      <text key="capacity" text="Capacité totale" default="1" />
+      <text key="capacity:disabled" text="Nombre places PMR" default="0" />
+      <combo key="orientation" text="Orientation (longitudinale, perpendiculaire...)" values="parallel,diagonal,perpendicular" default="parallel" />
+      <key key="source" value="GrandGrandNancy Orthophotographie 2025" />
+    </item>
+    <!-- Place PMR -->
+    <item name="Place PMR" type="node,closedway" icon="https://raw.githubusercontent.com/simonpct/josm-config/refs/heads/main/assets/pmr.svg">
+      <key key="amenity" value="parking_space" />
+      <key key="parking_space" value="disabled" />
+      <key key="source" value="GrandGrandNancy Orthophotographie 2025" />
+    </item>
+    <!-- Place livraison -->
+    <item name="Place livraison" type="node,closedway" icon="https://raw.githubusercontent.com/simonpct/josm-config/refs/heads/main/assets/delivery.svg">
+      <key key="amenity" value="parking_space" />
+      <key key="parking_space" value="delivery" />
+      <key key="source" value="GrandGrandNancy Orthophotographie 2025" />
+    </item>
+    <!-- Place normale (sans parking_space=yes qui est inutile selon OSM) -->
+    <item name="Place normale" type="node,closedway" icon="https://raw.githubusercontent.com/simonpct/josm-config/refs/heads/main/assets/space.svg">
+      <key key="amenity" value="parking_space" />
+      <key key="source" value="GrandGrandNancy Orthophotographie 2025" />
+    </item>
+  </group>
+  <!-- Trottoirs -->
+  <group name="Trottoirs">
+    <item name="Both" type="way, closedway" icon="https://raw.githubusercontent.com/simonpct/josm-config/refs/heads/main/assets/sidewalks/both.png">
+      <key key="sidewalk:both" value="separate" />
+      <key key="sidewalk" />
+      <key key="sidewalk:surface" />
+      <key key="sidewalk:both:surface" />
+      <key key="sidewalk:left:surface" />
+      <key key="sidewalk:right:surface" />
+      <key key="sidewalk:left" />
+      <key key="sidewalk:right" />
+    </item>
+    <item name="Right" type="way, closedway" icon="https://raw.githubusercontent.com/simonpct/josm-config/refs/heads/main/assets/sidewalks/right.png">
+      <key key="sidewalk:both" />
+      <key key="sidewalk" />
+      <key key="sidewalk:surface" />
+      <key key="sidewalk:both:surface" />
+      <key key="sidewalk:left:surface" />
+      <key key="sidewalk:right:surface" />
+      <key key="sidewalk:left" value="no" />
+      <key key="sidewalk:right" value="separate" />
+    </item>
+    <item name="Left" type="way, closedway" icon="https://raw.githubusercontent.com/simonpct/josm-config/refs/heads/main/assets/sidewalks/left.png">
+      <key key="sidewalk:both" />
+      <key key="sidewalk" />
+      <key key="sidewalk:surface" />
+      <key key="sidewalk:both:surface" />
+      <key key="sidewalk:left:surface" />
+      <key key="sidewalk:right:surface" />
+      <key key="sidewalk:right" value="no" />
+      <key key="sidewalk:left" value="separate" />
+    </item>
   </group>
 </presets>
